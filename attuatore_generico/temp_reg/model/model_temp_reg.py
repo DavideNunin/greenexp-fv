@@ -73,12 +73,8 @@ class Model_Temp_Reg(Model_Att):
     def get_consumo_real(self, spinbox_value):
         valore_finale=0
         if self.get_switch():
-            if spinbox_value==self.get_temp_cons():
-                valore_finale=self.get_consumo()
-            elif spinbox_value>self.get_temp_cons():
-                valore_finale=self.get_consumo()+(10/100)*spinbox_value
-            else:
-                valore_finale=self.get_consumo()-(10/100)*spinbox_value
+            cons_value = self.get_temp_cons()
+            valore_finale= max(0,self.get_consumo()*(1 + (spinbox_value - cons_value)/cons_value))
         return valore_finale
     
     """

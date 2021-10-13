@@ -130,11 +130,11 @@ class Vista_Pompa(Simple_Window):
     def setui(self):
         self.refresh_table()
         self.ui.selectprofile.addItems(self.controller.get_list_profiles())
+        self.ui.onoff_pompa.setChecked(self.controller.get_switch())
         self.ui.onoff_pompa.stateChanged.connect(self.toggleswitch)
         self.ui.doubleSpinBox_1_ph.valueChanged.connect(self.on_change_ph)
         self.ui.doubleSpinBox_2_ec.valueChanged.connect(self.on_change_ec)
         self.ui.selectprofile.activated.connect(self.on_change_sol)
-        self.ui.onoff_pompa.setChecked(self.controller.get_switch())
         val_ph=self.controller.get_ph()
         val_ec=self.controller.get_ec()
         cons_ph=self.controller.get_ph_cons()

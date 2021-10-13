@@ -21,7 +21,7 @@ class Contr_Att():
     '''
 
     def get_consumo(self):
-        return self.model.get_consumo()
+        return "{:.2f}".format(self.model.get_consumo())
 
     '''
         Restituisce il consumo energetico mediio dell'attuatore
@@ -32,7 +32,7 @@ class Contr_Att():
     '''
 
     def get_consumo_medio(self, spinbox_value):
-        return self.model.get_consumo_medio(spinbox_value)
+        return "{:.2f}".format(self.model.get_consumo_medio(spinbox_value))
 
     '''
         Restituisce il consumo energetico attuale dell'attuatore
@@ -43,7 +43,7 @@ class Contr_Att():
     '''
 
     def get_consumo_real(self, spinbox_value):
-        return self.model.get_consumo_real(spinbox_value)
+        return "{:.2f}".format(self.model.get_consumo_real(spinbox_value))
 
     '''
         Restituisce il nome comune della coltura coltivata nel settore
