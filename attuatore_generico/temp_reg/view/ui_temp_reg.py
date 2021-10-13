@@ -20,7 +20,7 @@ class Ui_Temp_Reg(Ui_Att):
         self.consumo_medio.setText(_translate("att", "Consumo elettrico medio: "))
         self.valore_medio.setText(_translate("att", "valore_medio"))
 
-        self.titolo.setText(_translate("att", "Impianto di raffrescamento"))
+        self.titolo.setText(_translate("att", "Impianto di riscaldamento/raffrescamento"))
         self.obiettivo.setText(_translate("att", "Livello di temperatura obiettivo (°C)"))
         self.indietro.setText(_translate("att", "indietro"))
 
